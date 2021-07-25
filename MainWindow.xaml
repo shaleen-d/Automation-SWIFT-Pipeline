@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:CorLib="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="ACU Daily File Processor" Height="350" Width="525">
+    <Grid Background="#FFE6CCEE" Margin="0,-28,-31,-55" HorizontalAlignment="Left" Width="548">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="132*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="aCULogo" HorizontalAlignment="Left" Height="106" Margin="59,2,0,0" VerticalAlignment="Top" Width="149" Source="C:\Users\Shaleen\Desktop\logoL.bmp" Grid.Row="1" Grid.RowSpan="2"/>
+        <Label x:Name="titleACUApp" Content="Asian Clearing Union&#xD;&#xA;Process Daily File" HorizontalAlignment="Left" Height="93" Margin="208,5,0,0" VerticalAlignment="Top" Width="330" FontSize="21.333" Foreground ="#FF2B0A2E" Grid.Row="1" />
+        <Button x:Name="processFileBtn" Content="Process and Save File" HorizontalAlignment="Left" Margin="286,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="124" Height="30" Click="processFileBtnClick">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDEA0EC" Offset="0.245"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="41" Margin="59,25,0,0" Grid.Row="2" TextWrapping="Wrap" Text="{x:Static CorLib:Environment.CurrentDirectory}" VerticalAlignment="Top" Width="351"/>
+        <Label x:Name="outcomeLabel" Content="Select ACU File for processing using 'Open ACU File' button..." HorizontalAlignment="Left" Height="32" Margin="59,0,0,0" Grid.Row="5" VerticalAlignment="Top" Width="351"/>
+        <Button x:Name="openFileBtn" Content="Open ACU File" HorizontalAlignment="Left" Margin="59,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="124" Height="30" Click="openFileBtnClick">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDEA0EC" Offset="0.245"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="157,0,0,15" Grid.Row="3" TextWrapping="Wrap" Text="55" VerticalAlignment="Bottom" Width="35"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="28" Margin="59,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Lines per Page = " VerticalAlignment="Top" Width="98"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="28" Margin="256,1,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Columns per Page = " VerticalAlignment="Top" Width="114"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="375,0,0,14" Grid.Row="3" TextWrapping="Wrap" Text="73" VerticalAlignment="Bottom" Width="35"/>
+    </Grid>
+</Window>
